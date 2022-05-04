@@ -1,0 +1,89 @@
+body {
+  background: linear-gradient(-45deg, #b83d04, #df4a05, #f3d8cc);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+  margin: 0px;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.banner {
+  width: 100vw;
+  font-size: 32px;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: solid black 2px;
+  color: black;
+  background-color: white;
+}
+
+.titles {
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+  color: black;
+  padding-left: 2%;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 79vh;
+}
+
+.button {
+  margin: 2%;
+  margin-top: 5%;
+  width: 40vw;
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  border: 1px solid black;
+  color: black;
+  cursor: pointer;
+  left: 30vw;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button:after {
+  content: "";
+  background-color: white;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+.button:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+@media (min-width: 768px) {
+  .button {
+    padding: 13px 50px 13px;
+  }
+}

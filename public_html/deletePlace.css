@@ -1,0 +1,110 @@
+body {
+  background: linear-gradient(-45deg, #b83d04, #df4a05, #f3d8cc);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+  margin: 0px;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#logErr {
+  font-size: 20px;
+  color: red;
+  margin-left: 2%;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 90vh;
+}
+
+.banner {
+  width: 100vw;
+  font-size: 32px;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  background-color: white;
+  border-bottom: solid black 2px;
+}
+
+.titles {
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+  color: black;
+  margin-top: 5%;
+  margin-left: 2%;
+  margin-bottom: 3%;
+}
+
+.inputLine {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 2%;
+  margin-left: 2%;
+}
+
+.button {
+  margin-top: 1%;
+  width: 40vw;
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  color: black;
+  left: 30vw;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.fields {
+  font-size: 20px;
+  color: black;
+  margin-right: 2%;
+}
+
+.button:after {
+  content: "";
+  background-color: white;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+.button:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+@media (min-width: 768px) {
+  .button {
+    padding: 13px 50px 13px;
+  }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Find Nearby Places</title>
+    <link rel="stylesheet" type="text/css" href="./searchPlace.css" />
+    <script src="./nav.js"></script>
+  </head>
+  <body>
+    <div class="page">
+      <div class="banner">Find Nearby Places</div>
+      <div class="titles">Search Places</div>
+      <div class="holder">
+        <div class="inputLine">
+          <div class="fields">Search Term</div>
+          <input id="term_search" type="text" required />
+        </div>
+        <div class="inputLine">
+          <div class="fields">User Location (Lat, Long)</div>
+          <div class="holder">
+            <input id="lat_search" type="test" required />
+            <input id="long_search" type="text" required />
+          </div>
+        </div>
+        <div class="inputLine">
+          <div class="fields">Radius Filter</div>
+          <input id="radius_search" type="text" required />
+        </div>
+        <div class="inputLine">
+          <div class="fields">Max number of results</div>
+          <input id="max_res_search" type="text" required />
+        </div>
+        <div class="inputLine">
+          <div class="fields">Category Filter</div>
+          <input id="cat_filt_search" type="text" required />
+        </div>
+        <div class="inputLine">
+          <div class="fields">Sort</div>
+          <input id="sort_search" type="text" required />
+        </div>
+      </div>
+      <button class="button" onclick="searchPlace()">Search</button>
+      <button class="button" onclick="goHome()">Back to Home</button>
+    </div>
+  </body>
+</html>

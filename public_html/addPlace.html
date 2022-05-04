@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Find Nearby Places</title>
+    <link rel="stylesheet" type="text/css" href="./addPlace.css" />
+    <script src="./nav.js"></script>
+  </head>
+  <body>
+    <div class="page">
+      <div class="banner">Find Nearby Places</div>
+      <div class="titles">Add Place</div>
+      <div class="holder">
+        <div class="inputLine">
+          <div class="fields">Name</div>
+          <input id="place_name_add" type="text" required />
+        </div>
+        <div class="inputLine">
+          <div class="fields">Category ID</div>
+          <input id="cat_id_add" type="number" required />
+        </div>
+        <div class="inputLine">
+          <div class="fields">Latitude</div>
+          <input id="lat_add" type="text" required />
+        </div>
+        <div class="inputLine">
+          <div class="fields">Longitude</div>
+          <input id="long_add" type="text" required />
+        </div>
+        <div class="inputLine">
+          <div class="fields">Description</div>
+          <input id="desc_add" type="text" required />
+        </div>
+      </div>
+      <button class="button" onclick="addPlace()">Add Place</button>
+      <button class="button" onclick="goHome()">Back to Home</button>
+    </div>
+  </body>
+</html>

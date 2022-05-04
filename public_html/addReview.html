@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Find Nearby Places</title>
+    <link rel="stylesheet" type="text/css" href="./addPlace.css" />
+    <script src="./nav.js"></script>
+  </head>
+  <body>
+    <div class="page">
+      <div class="banner">Find Nearby Places</div>
+      <div class="titles">Add Review</div>
+      <div class="holder">
+        <div class="inputLine">
+          <div class="fields">Place ID</div>
+          <input id="place_id_rev" type="text" required />
+        </div>
+        <div class="inputLine">
+          <div class="fields">Comment</div>
+          <input id="comment_rev" type="number" required />
+        </div>
+        <div class="inputLine">
+          <div class="fields">Rating</div>
+          <input id="rating_rev" type="text" required />
+        </div>
+      </div>
+      <button class="button" onclick="addReview()">Add Review</button>
+      <button class="button" onclick="goHome()">Back to Home</button>
+    </div>
+  </body>
+</html>

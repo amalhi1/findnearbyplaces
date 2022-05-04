@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Find Nearby Places</title>
+    <link rel="stylesheet" type="text/css" href="./index.css" />
+    <script src="./nav.js"></script>
+  </head>
+  <body>
+    <div class="page">
+      <div class="banner">Find Nearby Places</div>
+      <div>
+        <div class="titles">Login</div>
+        <div class="inputLine">
+          <div class="fields">Username</div>
+          <input id="UserUsn" type="text" required />
+        </div>
+        <div class="inputLine">
+          <div class="fields">Password</div>
+          <input id="UserPwd" type="password" required />
+        </div>
+        <button class="button" onclick="login()">Login</button>
+        <div id="logErr"></div>
+        <div class="or">or</div>
+        <button class="button" onclick="goCreateAcc()">Create Account</button>
+      </div>
+    </div>
+  </body>
+</html>
