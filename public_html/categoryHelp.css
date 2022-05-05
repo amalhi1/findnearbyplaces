@@ -85,15 +85,10 @@ body {
   touch-action: manipulation;
 }
 
-.fields {
+.texts {
   font-size: 20px;
   color: white;
   margin-right: 2%;
-}
-
-.holder {
-  display: flex;
-  flex-direction: column;
 }
 
 .button:after {

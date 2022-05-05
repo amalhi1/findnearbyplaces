@@ -214,6 +214,10 @@ function createAcc() {
   window.location = "./index.html";
 }
 
+function goCatHelp() {
+  window.location = "./categoryHelp.html";
+}
+
 function goAddRev() {
   window.location = "./addReview.html";
 }
@@ -247,7 +251,7 @@ function goHome() {
 }
 
 function createAcc() {
-  let username = document.getElementById("UserUsn2").value;
+  let username = document.getElementById("email2").value;
   let pwd = document.getElementById("UserPwd2").value;
   apiAccess
     .customer(username, pwd)
@@ -279,17 +283,11 @@ function addPlace() {
   let long = document.getElementById("long_add").value;
   let desc = document.getElementById("desc_add").value;
   let cust_id = localStorage.getItem("customer_id");
-  apiAccess.category(cat_id).then((x) => {
-    if (x.done) {
-      apiAccess.place(name, cat_id, lat, long, desc, cust_id).then((y) => {
-        if (y.done) {
-          alert("Place succesfully added");
-        } else {
-          alert("Place was not added due to an error");
-        }
-      });
+  apiAccess.place(name, cat_id, lat, long, desc, cust_id).then((y) => {
+    if (y.done) {
+      alert("Place succesfully added");
     } else {
-      alert("Category not added due to an error");
+      alert("Place was not added due to an error");
     }
   });
 }
@@ -344,6 +342,15 @@ function addPhoto() {
   }
 }
 
+function checkCategory(id) {
+  console.log(id);
+  if (document.getElementById(id).value > 11) {
+    document.getElementById(id).value = 11;
+  } else if (document.getElementById(id).value < 0) {
+    document.getElementById(id).value = 1;
+  }
+}
+
 function updatePlace() {
   let place_id = document.getElementById("place_id_up").value;
   let name = document.getElementById("place_name_up").value;
@@ -351,23 +358,17 @@ function updatePlace() {
   let lat = document.getElementById("lat_up").value;
   let long = document.getElementById("long_up").value;
   let desc = document.getElementById("desc_up").value;
-  apiAccess.category(cat_id).then((x) => {
-    if (x.done) {
-      apiAccess.placePut(place_id, name, cat_id, lat, long, desc).then((y) => {
-        if (y.done) {
-          alert("Place succesfully update");
-        } else {
-          alert("Place was not updated due to an error");
-        }
-      });
+  apiAccess.placePut(place_id, name, cat_id, lat, long, desc).then((y) => {
+    if (y.done) {
+      alert("Place succesfully update");
     } else {
-      alert("Category not added due to an error");
+      alert("Place was not updated due to an error");
     }
   });
 }
 
 function login() {
-  let username = document.getElementById("UserUsn").value;
+  let username = document.getElementById("email").value;
   let pwd = document.getElementById("UserPwd").value;
   apiAccess
     .login(username, pwd)

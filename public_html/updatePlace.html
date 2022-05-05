@@ -20,16 +20,23 @@
           <input id="place_name_up" type="text" required />
         </div>
         <div class="inputLine">
-          <div class="fields">Category ID</div>
-          <input id="cat_id_up" type="number" required />
+          <div class="fields">Category ID (1 - 11)</div>
+          <input
+            onchange="checkCategory('cat_id_up')"
+            id="cat_id_up"
+            type="number"
+            min="1"
+            max="11"
+            required
+          />
         </div>
         <div class="inputLine">
           <div class="fields">Latitude</div>
-          <input id="lat_up" type="text" required />
+          <input id="lat_up" type="number" required />
         </div>
         <div class="inputLine">
           <div class="fields">Longitude</div>
-          <input id="long_up" type="text" required />
+          <input id="long_up" type="number" required />
         </div>
         <div class="inputLine">
           <div class="fields">Description</div>
